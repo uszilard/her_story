@@ -1,4 +1,4 @@
-# Empowering women all over the world.
+# Empowering women all over the world ♀️
 
 1. Install dependencies
 `npm install`
