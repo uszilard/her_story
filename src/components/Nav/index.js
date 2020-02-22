@@ -13,7 +13,8 @@ const useStyles = makeStyles({
     right: 0,
     backgroundColor: 'pink',
     position: 'fixed',
-    bottom: 0
+    bottom: 0,
+    zIndex: 1
   },
 });
 

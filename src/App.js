@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
+import Nav from "./components/Nav";
 //import BooksList from "./pages/BooksList";
 //import NewsLetter from "./pages/NewsLetter";
 //import NoMatch from "./pages/NoMatch";
-import Nav from "./components/Nav";
+
 //import EventsList from "./pages/EventsList";
 
 
