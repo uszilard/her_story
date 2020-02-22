@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Home from "./pages/Home";
 import BooksList from "./pages/BooksList";
-import MySpace from "./pages/MySpace";
+import NewsLetter from "./pages/NewsLetter";
 import NoMatch from "./pages/NoMatch";
 import Nav from "./components/Nav";
 import EventsList from "./pages/EventsList";
@@ -19,7 +19,7 @@ function App() {
           <Route exact path="/home" component={Home} />
           <Route exact path="/events" component={EventsList} />
           <Route exact path="/books" component={BooksList} />
-          <Route exact path="/my-space" component={MySpace} />
+          <Route exact path="/newsletter" component={NewsLetter} />
           <Route component={NoMatch} />
         </Switch>
       </StateProvider>
