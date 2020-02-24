@@ -1,21 +1,33 @@
 import React from "react";
 import { Col, Row, Container } from "../components/Grid";
-import CreatePostForm from "../components/CreatePostForm";
-import PostsList from "../components/PostsList";
+import { makeStyles } from '@material-ui/core/styles';
 
-function Home() {
+const eventStyles = makeStyles({
+    logo: {
+        fontFamily: 'Merienda',
+        textAlign: 'center',
+        textTransform: 'uppercase',
+        color: '#999'
+    },
+});
+
+function Events() {
+    const classes = eventStyles();
     return (
         <Container fluid>
             <Row>
                 <Col size="md-6">
-                    <CreatePostForm />
+                    <nav>
+                        <h1 className={classes.logo} id='homePageLogo'>Events</h1>
+                    </nav>
                 </Col>
                 <Col size="md-6 sm-12">
-                    <PostsList />
+
                 </Col>
             </Row>
         </Container>
     );
 }
 
-export default Home;
+export default Events;
+

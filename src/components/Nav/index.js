@@ -11,7 +11,7 @@ const useStyles = makeStyles({
   root: {
     left: 0,
     right: 0,
-    backgroundColor: 'pink',
+    backgroundColor: '#88EB4D',
     position: 'fixed',
     bottom: 0,
     zIndex: 1
