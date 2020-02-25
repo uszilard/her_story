@@ -1,6 +1,5 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 
 import styled from "styled-components";
@@ -28,6 +27,12 @@ const homeStyles = makeStyles({
   },
   pos: {
     marginBottom: 12
+  },
+  img: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: "100%",
+    maxWidth: "100%",
   }
 });
 
@@ -35,6 +40,7 @@ export const Quote = styled.div`
   padding: 0.5rem;
   font-family: "Open Sans", sans-serif;
 `;
+
 
 const Img = styled.img`
   display: flex;
@@ -58,11 +64,11 @@ function Home() {
   const classes = homeStyles();
   return (
     <React.Fragment>
-      <Nav>
-        <h1 className={classes.logo} id="homePageLogo">
-          her story
-        </h1>
-      </Nav>
+      <Card>
+        <nav>
+          <img id="homePageLogo" className={classes.img} alt="Logo Her Story" src="/hslogo3.PNG"></img>
+        </nav>
+      </Card>
       {[
         {
           name: "Simone de Beauvoir, french author and philosopher",
