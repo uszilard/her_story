@@ -17,7 +17,8 @@ const useStyles = makeStyles({
     position: "fixed",
     bottom: 0,
     zIndex: 1,
-    boxShadow: "20px 0px 20px rgba(182, 182, 182, 0.75)"
+    boxShadow: "20px 0px 20px rgba(182, 182, 182, 0.75)",
+    backgroundColor: '#FFBABE'
   }
 });
 
