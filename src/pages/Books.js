@@ -1,7 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Row, Container } from "../components/Grid";
 import { makeStyles } from '@material-ui/core/styles';
-import ResultBookList from "../components/BooksList/BooksList";
+import APIBooks from "../utils/APIBooks"
+
+
 
 const bookStyles = makeStyles({
     logo: {
@@ -14,16 +16,28 @@ const bookStyles = makeStyles({
 });
 
 function Books() {
+
+    const [data, setData] = useState({ hits: [] });
+
+
+
+    useEffect(() => {
+        const fetchData = async () => {
+            const result = await APIBooks.search()
+            setData(result.data);
+        };
+        fetchData();
+    }, []);
+
     const classes = bookStyles();
+
+    console.log(data)
     return (
         <Container fluid>
-            <Row>
-                <Col size="md-6">
-                    <nav>
-                        <h1 className={classes.logo} id='homePageLogo'>Books</h1>
-                    </nav>
-                </Col>
-            </Row>
+            <nav>
+                <h1 className={classes.logo} id='homePageLogo'>Books</h1>
+            </nav>
+
         </Container>
     );
 }
