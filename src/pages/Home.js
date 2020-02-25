@@ -55,6 +55,11 @@ function Home() {
       </nav>
       {[
         {
+          name: "Simone de Beauvoir, french author and philosopher",
+          img: "/simone.jpeg",
+          quote: "One is not born, but rather becomes, a woman."
+        },
+        {
           name: "Florence Nightingale, the founder of modern nursing",
           img: "/florence.jpeg",
           quote:
@@ -65,6 +70,7 @@ function Home() {
           img: "/janis.jpeg",
           quote: "Don’t compromise yourself. You are all you’ve got."
         },
+
         {
           name: "Malala Yousafzai, Pakistani activist and Nobel laureate",
           quote:
