@@ -22,12 +22,9 @@ function Books() {
                         <h1 className={classes.logo} id='homePageLogo'>Books</h1>
                     </nav>
                 </Col>
-<<<<<<< Updated upstream
-=======
                 <Col size="md-6 sm-12">
                     <ResultBookList />
                 </Col>
->>>>>>> Stashed changes
             </Row>
         </Container>
     );
