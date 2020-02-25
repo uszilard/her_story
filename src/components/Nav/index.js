@@ -1,21 +1,21 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import BottomNavigation from '@material-ui/core/BottomNavigation';
-import BottomNavigationAction from '@material-ui/core/BottomNavigationAction';
-import HomeIcon from '@material-ui/icons/Home';
-import PeopleIcon from '@material-ui/icons/People';
-import MenuBookIcon from '@material-ui/icons/MenuBook';
-import FolderIcon from '@material-ui/icons/Folder';
+import { makeStyles } from "@material-ui/core/styles";
+import BottomNavigation from "@material-ui/core/BottomNavigation";
+import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
+import HomeIcon from "@material-ui/icons/Home";
+import PeopleIcon from "@material-ui/icons/People";
+import MenuBookIcon from "@material-ui/icons/MenuBook";
+import FolderIcon from "@material-ui/icons/Folder";
 
 const useStyles = makeStyles({
   root: {
     left: 0,
     right: 0,
-    backgroundColor: '#88EB4D',
-    position: 'fixed',
+    position: "fixed",
     bottom: 0,
-    zIndex: 1
-  },
+    zIndex: 1,
+    boxShadow: "20px 0px 20px rgba(182, 182, 182, 0.75)"
+  }
 });
 
 export default function SimpleBottomNavigation() {
@@ -34,8 +34,11 @@ export default function SimpleBottomNavigation() {
       <BottomNavigationAction label="Home" icon={<HomeIcon />} />
       <BottomNavigationAction label="Events" icon={<PeopleIcon />} />
       <BottomNavigationAction label="Books" icon={<MenuBookIcon />} />
-      <BottomNavigationAction label="NewsLetter" value="folder" icon={<FolderIcon />} />
+      <BottomNavigationAction
+        label="NewsLetter"
+        value="folder"
+        icon={<FolderIcon />}
+      />
     </BottomNavigation>
   );
 }
-

@@ -8,22 +8,18 @@ import NewsLetter from "./pages/NewsLetter";
 //import NoMatch from "./pages/NoMatch";
 
 function App() {
-
   return (
     <Router>
       <Nav />
       <Switch>
-
         <Route exact path="/" component={Home} />
         <Route exact path="/home" component={Home} />
         <Route exact path="/events" component={Events} />
         <Route exact path="/books" component={Books} />
         <Route exact path="/newsletter" component={NewsLetter} />
         {/*<Route component={NoMatch} />*/}
-
       </Switch>
-
-    </Router >
+    </Router>
   );
 }
 

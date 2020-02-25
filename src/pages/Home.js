@@ -1,85 +1,102 @@
 import React from "react";
-import { makeStyles } from '@material-ui/core/styles';
-import Card from '@material-ui/core/Card';
-import CardActionArea from '@material-ui/core/CardActionArea';
-import CardActions from '@material-ui/core/CardActions';
-import CardContent from '@material-ui/core/CardContent';
-import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
+import { makeStyles } from "@material-ui/core/styles";
+import Typography from "@material-ui/core/Typography";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from 'react-responsive-carousel';
+
+import styled from "styled-components";
+
+import { Card } from "react-rainbow-components";
+
+require("typeface-open-sans");
 
 const homeStyles = makeStyles({
   logo: {
-    fontFamily: 'Merienda',
-    textAlign: 'center',
-    textTransform: 'uppercase',
-    color: '#999'
+    fontFamily: "Merienda",
+    textAlign: "center",
+    textTransform: "uppercase",
+    color: "#999"
   },
   root: {
-    minWidth: 275,
+    minWidth: 275
   },
   bullet: {
-    display: 'inline-block',
-    margin: '0 2px',
-    transform: 'scale(0.8)',
+    display: "inline-block",
+    margin: "0 2px",
+    transform: "scale(0.8)"
   },
   title: {
-    fontSize: 14,
+    fontSize: 14
   },
   pos: {
-    marginBottom: 12,
-  },
+    marginBottom: 12
+  }
 });
+
+export const Quote = styled.div`
+  padding: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+`;
+
+const Img = styled.img`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+`;
 
 function Home() {
   const classes = homeStyles();
   return (
     <React.Fragment>
       <nav>
-        <h1 className={classes.logo} id='homePageLogo'>Her Story</h1>
+        <h1 className={classes.logo} id="homePageLogo">
+          Her Story
+        </h1>
       </nav>
-      <Carousel emulateTouch swipeScrollTolerance={10} showThumbs={false} showIndicators={false}>
-        {[1, 2, 3, 4, 5].map(i =>
-          <Card>
-            <img alt="this is my immage" src="https://aruljohn.com/info/pix/yahoo_profile.png" />
-            <CardActionArea>
-              <CardContent>
-                <Typography gutterBottom variant="h5" component="h2">
-                  Quote of the day
-          </Typography>
-                <Typography variant="body2" color="textSecondary" component="p">
-                  Women, like men, should try to do the impossible. And when they fail, their failure should be a challenge to others.
-          </Typography>
-              </CardContent>
-            </CardActionArea>
-            <CardActions>
-              <Button size="small" color="primary">
-                Share
-        </Button>
-              <Button size="small" color="primary">
-                Learn More
-        </Button>
-            </CardActions>
-          </Card>)
+      {[
+        {
+          name: "Florence Nightingale, the founder of modern nursing",
+          img: "/florence.jpeg",
+          quote:
+            "I attribute my success to this: I never gave or took an excuse."
+        },
+        {
+          name: "Janis Joplin, American musician",
+          img: "/janis.jpeg",
+          quote: "Don’t compromise yourself. You are all you’ve got."
+        },
+        {
+          name: "Malala Yousafzai, Pakistani activist and Nobel laureate",
+          quote:
+            "We realize the importance of our voices only when we are silenced."
+        },
+        {
+          name: "Sojourner Truth, American abolitionist",
+          quote:
+            "If the first woman God ever made was strong enough to turn the world upside down all alone, these together ought to be able to turn it back and get it right side up again."
+        },
+        {
+          name: "Grace Hopper, U.S. Naval Admiral and computer scientist",
+          quote:
+            "If it's a good idea, go ahead and do it. It's much easier to apologize than it is to get permission."
+        },
+        {
+          name: "Simone de Beauvoir, U.S. Naval Admiral and computer scientist",
+          quote:
+            "If it's a good idea, go ahead and do it. It's much easier to apologize than it is to get permission."
         }
-      </Carousel >
-
-      <Card className={classes.root} variant="outlined">
-        <CardContent>
-
-          <Typography variant="h5" component="h2">
-            Aabout Us
-        </Typography>
-
-          <Typography variant="body2" component="p">
-            Sunt reprehenderit adipisicing adipisicing id. Consequat ea consectetur laborum laboris aliquip ut commodo nisi sint nulla laborum pariatur. Adipisicing quis magna fugiat voluptate ea consequat Lorem ipsum eiusmod laborum non veniam. Enim commodo eu adipisicing do eiusmod qui amet. Cillum mollit sit incididunt incididunt et do amet.
-          </Typography>
-        </CardContent>
-      </Card>
-
-    </React.Fragment >
-  )
-};
+      ].map(({ quote, name, img }) => (
+        <div style={{ margin: "1rem 0rem" }}>
+          <Card>
+            <Img src={img} />
+            <Quote>
+              {quote} - {name}
+            </Quote>
+          </Card>
+        </div>
+      ))}
+    </React.Fragment>
+  );
+}
 
 export default Home;
