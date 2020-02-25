@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Row, Container } from "../components/Grid";
 import { makeStyles } from '@material-ui/core/styles';
+import ResultBookList from "../components/BooksList/BooksList";
 
 const bookStyles = makeStyles({
     logo: {
@@ -21,9 +22,12 @@ function Books() {
                         <h1 className={classes.logo} id='homePageLogo'>Books</h1>
                     </nav>
                 </Col>
+<<<<<<< Updated upstream
+=======
                 <Col size="md-6 sm-12">
-
+                    <ResultBookList />
                 </Col>
+>>>>>>> Stashed changes
             </Row>
         </Container>
     );
