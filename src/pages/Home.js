@@ -1,19 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
-import Typography from "@material-ui/core/Typography";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 import styled from "styled-components";
-
 import { Card } from "react-rainbow-components";
 
 require("typeface-open-sans");
 
 const homeStyles = makeStyles({
   logo: {
-    fontFamily: "'Montserrat', sans-serif",
-    textAlign: "center",
-    color: "pink"
+    fontFamily: "'Montserrat', sans- serif",
+    textAlign: 'center',
+    color: 'pink'
   },
   root: {
     minWidth: 275
@@ -28,6 +25,12 @@ const homeStyles = makeStyles({
   },
   pos: {
     marginBottom: 12
+  },
+  img: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: "100%",
+    maxWidth: "100%",
   }
 });
 
@@ -43,12 +46,6 @@ const Img = styled.img`
   max-width: 100%;
 `;
 
-const Nav = styled.nav`
-  border: 1px solid pink;
-  border-radius: 3px;
-  margin: ${props => props.theme.sidePadding} 0rem;
-`;
-
 const StyledCard = styled(Card)`
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
   border-radius: 7px;
@@ -58,11 +55,11 @@ function Home() {
   const classes = homeStyles();
   return (
     <React.Fragment>
-      <Nav>
-        <h1 className={classes.logo} id="homePageLogo">
-          her story
-        </h1>
-      </Nav>
+      <Card>
+        <nav>
+          <img id="homePageLogo" className={classes.img} alt="Logo Her Story" src="/hslogo3.PNG"></img>
+        </nav>
+      </Card>
       {[
         {
           name: "Simone de Beauvoir, french author and philosopher",

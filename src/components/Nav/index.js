@@ -7,6 +7,9 @@ import PeopleIcon from "@material-ui/icons/People";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
 import FolderIcon from "@material-ui/icons/Folder";
 
+import { Link } from "react-router-dom";
+
+
 const useStyles = makeStyles({
   root: {
     left: 0,
@@ -31,14 +34,18 @@ export default function SimpleBottomNavigation() {
       showLabels
       className={classes.root}
     >
-      <BottomNavigationAction label="Home" icon={<HomeIcon />} />
-      <BottomNavigationAction label="Events" icon={<PeopleIcon />} />
-      <BottomNavigationAction label="Books" icon={<MenuBookIcon />} />
-      <BottomNavigationAction
-        label="NewsLetter"
-        value="folder"
-        icon={<FolderIcon />}
-      />
+      <Link to='/'>
+        <BottomNavigationAction showLabel='true' label="Home" icon={<HomeIcon />} />
+      </Link>
+      <Link to='/events'>
+        <BottomNavigationAction showLabel='true' label="Events" icon={<PeopleIcon />} />
+      </Link>
+      <Link to='/books'>
+        <BottomNavigationAction showLabel='true' label="Books" icon={<MenuBookIcon />} />
+      </Link>
+      <Link to='/newsletter'>
+        <BottomNavigationAction showLabel='true' label="NewsLetter" value="folder" icon={<FolderIcon />} />
+      </Link>
     </BottomNavigation>
   );
 }
