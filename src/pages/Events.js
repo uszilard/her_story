@@ -1,4 +1,5 @@
 import React from "react";
+//import ReactDOM from "react-dom"
 import { Col, Row, Container } from "../components/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 
@@ -12,8 +13,33 @@ const eventStyles = makeStyles({
   }
 });
 
+const events = [
+  "Siri",
+  "Alexa",
+  "Google",
+  "Facebook",
+  "Twitter",
+  "Linkedin",
+  "Sinkedin"
+];
+
 function Events() {
   const classes = eventStyles();
+
+  const [searchTerm, setSearchTerm] = React.useState("");
+  const [searchResults, setSearchResults] = React.useState([]);
+  const handleChange = event => {
+    setSearchTerm(event.target.value);
+  };
+  React.useEffect(() => {
+    const results = events.filter(event =>
+      event.toLowerCase().includes(searchTerm)
+    );
+    setSearchResults(results);
+  }, [searchTerm]);
+
+
+
   return (
     <Container fluid>
       <Row>
@@ -24,7 +50,21 @@ function Events() {
             </h1>
           </nav>
         </Col>
-        <Col size="md-6 sm-12"></Col>
+        <Col size="md-6 sm-12">
+          <div className="App">
+            <input
+              type="text"
+              placeholder="Search"
+              value={searchTerm}
+              onChange={handleChange}
+            />
+            <ul>
+              {searchResults.map(item => (
+                <li>{item}</li>
+              ))}
+            </ul>
+          </div>
+        </Col>
       </Row>
     </Container>
   );
