@@ -5,7 +5,7 @@ import "./global.css";
 
 import App from "./App";
 
-const sidePadding = "1rem";
+const sidePadding = "0.25rem";
 
 const theme = {
   sidePadding
