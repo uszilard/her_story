@@ -1,5 +1,7 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import "typeface-montserrat";
+
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import Events from "./pages/Events";
@@ -8,7 +10,6 @@ import NewsLetter from "./pages/NewsLetter";
 //import NoMatch from "./pages/NoMatch";
 
 // Load Montserrat typeface
-require("typeface-montserrat");
 
 function App() {
   return (

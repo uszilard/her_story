@@ -46,7 +46,12 @@ const Img = styled.img`
 const Nav = styled.nav`
   border: 1px solid pink;
   border-radius: 3px;
-  margin: 0.5rem 0rem;
+  margin: ${props => props.theme.sidePadding} 0rem;
+`;
+
+const StyledCard = styled(Card)`
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
+  border-radius: 7px;
 `;
 
 function Home() {
@@ -98,12 +103,12 @@ function Home() {
         }
       ].map(({ quote, name, img }) => (
         <div style={{ margin: "1rem 0rem" }}>
-          <Card>
+          <StyledCard>
             <Img src={img} />
             <Quote>
               {quote} - {name}
             </Quote>
-          </Card>
+          </StyledCard>
         </div>
       ))}
     </React.Fragment>
