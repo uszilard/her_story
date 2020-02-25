@@ -7,6 +7,9 @@ import Books from "./pages/Books";
 import NewsLetter from "./pages/NewsLetter";
 //import NoMatch from "./pages/NoMatch";
 
+// Load Montserrat typeface
+require("typeface-montserrat");
+
 function App() {
   return (
     <Router>

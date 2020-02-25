@@ -11,10 +11,10 @@ require("typeface-open-sans");
 
 const homeStyles = makeStyles({
   logo: {
-    fontFamily: "Merienda",
+    fontFamily: "'Montserrat', sans-serif",
     textAlign: "center",
     textTransform: "uppercase",
-    color: "#999"
+    color: "pink"
   },
   root: {
     minWidth: 275
@@ -50,7 +50,7 @@ function Home() {
     <React.Fragment>
       <nav>
         <h1 className={classes.logo} id="homePageLogo">
-          Her Story
+          her story
         </h1>
       </nav>
       {[
