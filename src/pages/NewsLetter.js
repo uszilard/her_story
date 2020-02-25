@@ -11,6 +11,7 @@ const NewsLetterStyles = makeStyles({
         border: 'ridge'
     },
 });
+
 function NewsLetter() {
     const classes = NewsLetterStyles();
     return (

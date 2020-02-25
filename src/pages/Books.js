@@ -1,11 +1,10 @@
 import React, { useEffect, useState } from "react";
-import { Col, Row, Container } from "../components/Grid";
+import { Container } from "../components/Grid";
 import { makeStyles } from '@material-ui/core/styles';
-
 import axios from 'axios'
 
-const BASEURL = "https://www.googleapis.com/books/v1/volumes?q="
 
+const BASEURL = "https://www.googleapis.com/books/v1/volumes?q="
 
 const bookStyles = makeStyles({
     logo: {
@@ -20,8 +19,6 @@ const bookStyles = makeStyles({
 function Books() {
 
     const [data, setData] = useState([]);
-
-
 
     useEffect(() => {
         const fetchData = async () => {

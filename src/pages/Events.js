@@ -13,7 +13,7 @@ const eventStyles = makeStyles({
   }
 });
 
-const events = [
+const meetupEvents = [
   "Siri",
   "Alexa",
   "Google",
@@ -28,17 +28,15 @@ function Events() {
 
   const [searchTerm, setSearchTerm] = React.useState("");
   const [searchResults, setSearchResults] = React.useState([]);
-  const handleChange = event => {
-    setSearchTerm(event.target.value);
+  const handleChange = meetupEvents => {
+    setSearchTerm(meetupEvents.target.value);
   };
   React.useEffect(() => {
-    const results = events.filter(event =>
-      event.toLowerCase().includes(searchTerm)
+    const results = meetupEvents.filter(meetupEvents =>
+      meetupEvents.toLowerCase().includes(searchTerm)
     );
     setSearchResults(results);
   }, [searchTerm]);
-
-
 
   return (
     <Container fluid>
