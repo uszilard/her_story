@@ -13,7 +13,6 @@ const homeStyles = makeStyles({
   logo: {
     fontFamily: "'Montserrat', sans-serif",
     textAlign: "center",
-    textTransform: "uppercase",
     color: "pink"
   },
   root: {
@@ -44,15 +43,21 @@ const Img = styled.img`
   max-width: 100%;
 `;
 
+const Nav = styled.nav`
+  border: 1px solid pink;
+  border-radius: 3px;
+  margin: 0.5rem 0rem;
+`;
+
 function Home() {
   const classes = homeStyles();
   return (
     <React.Fragment>
-      <nav>
+      <Nav>
         <h1 className={classes.logo} id="homePageLogo">
           her story
         </h1>
-      </nav>
+      </Nav>
       {[
         {
           name: "Simone de Beauvoir, french author and philosopher",
