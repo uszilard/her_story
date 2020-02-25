@@ -5,7 +5,7 @@ export default {
 
 
   search: function (query) {
-    return axios.get(BASEURL + query);
+    return axios.get(BASEURL + query) + "?maxResults=10?printType=book";
   }
 
 

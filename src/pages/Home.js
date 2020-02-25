@@ -10,10 +10,9 @@ require("typeface-open-sans");
 
 const homeStyles = makeStyles({
   logo: {
-    fontFamily: "Merienda",
+    fontFamily: "'Montserrat', sans-serif",
     textAlign: "center",
-    textTransform: "uppercase",
-    color: "#999"
+    color: "pink"
   },
   root: {
     minWidth: 275
@@ -48,6 +47,17 @@ const Img = styled.img`
   justify-content: center;
   width: 100%;
   max-width: 100%;
+`;
+
+const Nav = styled.nav`
+  border: 1px solid pink;
+  border-radius: 3px;
+  margin: ${props => props.theme.sidePadding} 0rem;
+`;
+
+const StyledCard = styled(Card)`
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
+  border-radius: 7px;
 `;
 
 function Home() {
@@ -99,12 +109,12 @@ function Home() {
         }
       ].map(({ quote, name, img }) => (
         <div style={{ margin: "1rem 0rem" }}>
-          <Card>
+          <StyledCard>
             <Img src={img} />
             <Quote>
               {quote} - {name}
             </Quote>
-          </Card>
+          </StyledCard>
         </div>
       ))}
     </React.Fragment>

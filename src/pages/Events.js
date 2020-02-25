@@ -4,7 +4,7 @@ import { makeStyles } from "@material-ui/core/styles";
 
 const eventStyles = makeStyles({
   logo: {
-    fontFamily: "Merienda",
+    fontFamily: "'Montserrat'",
     textAlign: "center",
     textTransform: "uppercase",
     color: "#999"
