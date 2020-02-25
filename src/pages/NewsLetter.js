@@ -7,7 +7,8 @@ const NewsLetterStyles = makeStyles({
         fontFamily: 'Merienda',
         textAlign: 'center',
         textTransform: 'uppercase',
-        color: '#999'
+        color: '#999',
+        border: 'ridge'
     },
 });
 function NewsLetter() {
