@@ -35,16 +35,16 @@ export default function SimpleBottomNavigation() {
       className={classes.root}
     >
       <Link to='/'>
-        <BottomNavigationAction label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction showLabel='true' label="Home" icon={<HomeIcon />} />
       </Link>
       <Link to='/events'>
-        <BottomNavigationAction label="Events" icon={<PeopleIcon />} />
+        <BottomNavigationAction showLabel='true' label="Events" icon={<PeopleIcon />} />
       </Link>
       <Link to='/books'>
-        <BottomNavigationAction label="Books" icon={<MenuBookIcon />} />
+        <BottomNavigationAction showLabel='true' label="Books" icon={<MenuBookIcon />} />
       </Link>
       <Link to='/newsletter'>
-        <BottomNavigationAction label="NewsLetter" value="folder" icon={<FolderIcon />} />
+        <BottomNavigationAction showLabel='true' label="NewsLetter" value="folder" icon={<FolderIcon />} />
       </Link>
     </BottomNavigation>
   );
