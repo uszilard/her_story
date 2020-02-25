@@ -23,9 +23,6 @@ function Books() {
                         <h1 className={classes.logo} id='homePageLogo'>Books</h1>
                     </nav>
                 </Col>
-                <Col size="md-6 sm-12">
-                    <ResultBookList />
-                </Col>
             </Row>
         </Container>
     );
