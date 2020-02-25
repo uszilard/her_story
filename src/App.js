@@ -1,13 +1,10 @@
 import React from "react";
-
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import Events from "./pages/Events";
 import Books from "./pages/Books";
 import NewsLetter from "./pages/NewsLetter";
-
 
 export default function App() {
   return (
@@ -39,4 +36,3 @@ export default function App() {
     </Router>
   );
 }
-

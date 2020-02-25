@@ -1,18 +1,16 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-
 import styled from "styled-components";
-
 import { Card } from "react-rainbow-components";
 
 require("typeface-open-sans");
 
 const homeStyles = makeStyles({
   logo: {
-    fontFamily: "'Montserrat', sans-serif",
-    textAlign: "center",
-    color: "pink"
+    fontFamily: "'Montserrat', sans- serif",
+    textAlign: 'center',
+    color: 'pink'
   },
   root: {
     minWidth: 275
@@ -41,18 +39,11 @@ export const Quote = styled.div`
   font-family: "Open Sans", sans-serif;
 `;
 
-
 const Img = styled.img`
   display: flex;
   justify-content: center;
   width: 100%;
   max-width: 100%;
-`;
-
-const Nav = styled.nav`
-  border: 1px solid pink;
-  border-radius: 3px;
-  margin: ${props => props.theme.sidePadding} 0rem;
 `;
 
 const StyledCard = styled(Card)`
