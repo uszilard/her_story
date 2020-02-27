@@ -3,6 +3,7 @@ import React from "react";
 import { Col, Row, Container } from "../components/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Card } from "react-rainbow-components";
+import styled from "styled-components";
 
 const eventStyles = makeStyles({
   logo: {
@@ -21,14 +22,18 @@ const eventStyles = makeStyles({
 });
 
 const meetupEvents = [
-  "Siri",
-  "Alexa",
-  "Google",
-  "Facebook",
-  "Twitter",
-  "Linkedin",
-  "Sinkedin"
+
 ];
+
+const Input = styled.input`
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
+  border-radius: 7px;
+  padding: 0.5rem;
+  border: 1px solid pink;
+  width: -webkit-fill-available;
+  font-size: 16px;
+  margin-top: 5px;
+`;
 
 function Events() {
   const classes = eventStyles();
@@ -55,7 +60,7 @@ function Events() {
         </Card>
         <Col size="md-6 sm-12">
           <div className="App">
-            <input
+            <Input
               type="text"
               placeholder="Search"
               value={searchTerm}
