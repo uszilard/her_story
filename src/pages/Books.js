@@ -18,6 +18,7 @@ const Input = styled.input`
 const StyledCard = styled(Card)`
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
   border-radius: 7px;
+  margin-top: 5px;
 `;
 export const Quote = styled.div`
   padding: 0.5rem;
@@ -27,9 +28,17 @@ export const Quote = styled.div`
 const Img = styled.img`
   display: flex;
   justify-content: center;
-  width: 100%;
-  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+
 `;
+
+const Ul = styled.ul`
+    list-style-type: none;
+margin: 0;
+padding: 0;
+`
 
 const BASEURL = "https://www.googleapis.com/books/v1/volumes?q="
 
@@ -85,31 +94,23 @@ function Books() {
                 />
             </div>
 
-            <ul className="list-group">
-                {searchResults.length && searchResults.map(({ volumeInfo, infoLink }) => {
-
-                    return ([
-
+            <Ul className="list-group">
+                {searchResults.length && searchResults.map(({ volumeInfo }) => {
+                    return (
                         <li className="list-group-item" key={volumeInfo.title}>
-                            <h4>{volumeInfo.title}</h4>
-                            <p>By:{volumeInfo.auther}</p>
-                            <img alt={volumeInfo.title} className="img-fluid" src={volumeInfo.imageLinks.smallThumbnail} />
-                            <p>{volumeInfo.description}</p>
-                            <a href={infoLink}>more info</a>
-                        </li>
-                    ].map(({ quote, name, img }) => (
-                        <div style={{ margin: "1rem 0rem" }}>
                             <StyledCard>
-                                <Img src={img} />
+                                <Img src={volumeInfo.imageLinks.smallThumbnail} />
                                 <Quote>
-                                    {quote} - {name}
+                                    <h4>{volumeInfo.title}</h4>
+                                    <p>By: {volumeInfo.authors}</p>
+                                    <p>{volumeInfo.description.substring(0, 100) + "..."}</p>
+                                    <a href={volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">more info</a>
                                 </Quote>
                             </StyledCard>
-                        </div>
-                    ))
+                        </li>
                     )
                 })}
-            </ul>
+            </Ul>
 
         </Container>
     );
