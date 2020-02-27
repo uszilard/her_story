@@ -1,6 +1,7 @@
 import React from "react";
 import { Col, Row, Container } from "../components/Grid";
 import { makeStyles } from '@material-ui/core/styles';
+import { Card } from "react-rainbow-components";
 
 const NewsLetterStyles = makeStyles({
     logo: {
@@ -10,6 +11,12 @@ const NewsLetterStyles = makeStyles({
         color: '#999',
         border: 'ridge'
     },
+    img: {
+        display: 'flex',
+        justifyContent: 'center',
+        width: "100%",
+        maxWidth: "100%",
+    }
 });
 
 function NewsLetter() {
@@ -17,11 +24,11 @@ function NewsLetter() {
     return (
         <Container fluid>
             <Row>
-                <Col size="md-6">
+                <Card>
                     <nav>
-                        <h1 className={classes.logo} id='homePageLogo'>NewsLetter</h1>
+                        <img id="homePageLogo" className={classes.img} alt="Logo Her Story" src="/hslogo3.PNG"></img>
                     </nav>
-                </Col>
+                </Card>
                 <Col size="md-6 sm-12">
 
                 </Col>

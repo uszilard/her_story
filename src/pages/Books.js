@@ -3,6 +3,7 @@ import { Container } from "../components/Grid";
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios'
 import styled from "styled-components";
+import { Card } from "react-rainbow-components";
 
 
 const Input = styled.input`
@@ -12,6 +13,7 @@ const Input = styled.input`
   border: 1px solid pink;
   width: -webkit-fill-available;
   font-size: 16px;
+  margin-top: 5px;
 `;
 
 const BASEURL = "https://www.googleapis.com/books/v1/volumes?q="
@@ -24,6 +26,13 @@ const bookStyles = makeStyles({
         color: '#999',
         border: 'ridge'
     },
+    img: {
+        display: 'flex',
+        justifyContent: 'center',
+        width: "100%",
+        maxWidth: "100%",
+
+    }
 });
 
 function Books() {
@@ -46,9 +55,11 @@ function Books() {
     const classes = bookStyles();
     return (
         <Container fluid>
-            <nav>
-                <h1 className={classes.logo} id='homePageLogo'>Books</h1>
-            </nav>
+            <Card>
+                <nav>
+                    <img id="homePageLogo" className={classes.img} alt="Logo Her Story" src="/hslogo3.PNG"></img>
+                </nav>
+            </Card>
 
             <div className="App">
                 <Input
