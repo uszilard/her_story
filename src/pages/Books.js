@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect } from "react";
 import { Container } from "../components/Grid";
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios'
@@ -24,7 +24,6 @@ function Books() {
     const handleChange = searchBooks => {
         setSearchTerm(searchBooks.target.value);
     };
-
 
     useEffect(() => {
         const fetchData = async () => {
@@ -53,12 +52,11 @@ function Books() {
 
             <ul className="list-group">
                 {searchResults.length && searchResults.map(({ volumeInfo, infoLink }) => {
-
                     return (
                         <li className="list-group-item" key={volumeInfo.title}>
                             <h4>{volumeInfo.title}</h4>
                             <p>By:{volumeInfo.auther}</p>
-
+                            <img alt={volumeInfo.title} className="img-fluid" src={volumeInfo.imageLinks.smallThumbnail} />
                             <p>{volumeInfo.description}</p>
                             <a href={infoLink}>more info</a>
                         </li>
