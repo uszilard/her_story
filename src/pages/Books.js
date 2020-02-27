@@ -16,45 +16,26 @@ const bookStyles = makeStyles({
     },
 });
 
-const searchBooks = [
-    "Siri",
-    "Alexa",
-    "Google",
-    "Facebook",
-    "Twitter",
-    "Linkedin",
-    "Sinkedin"
-];
-
 
 function Books() {
 
-    const [searchTerm, setSearchTerm] = React.useState("");
+    const [searchTerm, setSearchTerm] = React.useState("women enpwerment");
     const [searchResults, setSearchResults] = React.useState([]);
     const handleChange = searchBooks => {
         setSearchTerm(searchBooks.target.value);
     };
-    React.useEffect(() => {
-        const results = searchBooks.filter(searchBooks =>
-            searchBooks.toLowerCase().includes(searchTerm)
-        );
-        setSearchResults(results);
-    }, [searchTerm]);
 
-
-    const [data, setData] = useState([]);
 
     useEffect(() => {
         const fetchData = async () => {
-            const result = await axios.get(BASEURL + "women" + "?maxResults=10?printType=book");
+            const result = await axios.get(BASEURL + searchTerm + "&maxResults=10&printType=books");
             console.log(result)
-            setData(result.data.items);
+            setSearchResults(result.data.items || []);
         };
         fetchData();
-    }, []);
+    }, [searchTerm]);
 
     const classes = bookStyles();
-    console.log("dsafdshj", data);
     return (
         <Container fluid>
             <nav>
@@ -68,23 +49,21 @@ function Books() {
                     value={searchTerm}
                     onChange={handleChange}
                 />
-                <ul>
-                    {searchResults.map(item => (
-                        <li>{item}</li>
-                    ))}
-                </ul>
             </div>
 
             <ul className="list-group">
-                {data.length && data.map(result => (
-                    <li className="list-group-item" key={result.volumeInfo.title}>
-                        <h4>{result.volumeInfo.title}</h4>
-                        <p>By:{result.volumeInfo.auther}</p>
-                        <img alt={result.volumeInfo.title} className="img-fluid" src={result.volumeInfo.imageLinks.smallThumbnail} />
-                        <p>{result.volumeInfo.description}</p>
-                        <a href={result.infoLink}>more info</a>
-                    </li>
-                ))}
+                {searchResults.length && searchResults.map(({ volumeInfo, infoLink }) => {
+
+                    return (
+                        <li className="list-group-item" key={volumeInfo.title}>
+                            <h4>{volumeInfo.title}</h4>
+                            <p>By:{volumeInfo.auther}</p>
+
+                            <p>{volumeInfo.description}</p>
+                            <a href={infoLink}>more info</a>
+                        </li>
+                    )
+                })}
             </ul>
 
         </Container>
