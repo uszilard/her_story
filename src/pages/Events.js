@@ -2,6 +2,7 @@ import React from "react";
 //import ReactDOM from "react-dom"
 import { Col, Row, Container } from "../components/Grid";
 import { makeStyles } from "@material-ui/core/styles";
+import { Card } from "react-rainbow-components";
 
 const eventStyles = makeStyles({
   logo: {
@@ -10,6 +11,12 @@ const eventStyles = makeStyles({
     textTransform: 'uppercase',
     color: '#999',
     border: 'ridge'
+  },
+  img: {
+    display: 'flex',
+    justifyContent: 'center',
+    width: "100%",
+    maxWidth: "100%",
   }
 });
 
@@ -41,13 +48,11 @@ function Events() {
   return (
     <Container fluid>
       <Row>
-        <Col size="md-6">
+        <Card>
           <nav>
-            <h1 className={classes.logo} id="homePageLogo">
-              Events
-            </h1>
+            <img id="homePageLogo" className={classes.img} alt="Logo Her Story" src="/hslogo3.PNG"></img>
           </nav>
-        </Col>
+        </Card>
         <Col size="md-6 sm-12">
           <div className="App">
             <input
