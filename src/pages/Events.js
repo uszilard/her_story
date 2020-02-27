@@ -5,7 +5,6 @@ import { makeStyles } from "@material-ui/core/styles";
 import { Card } from "react-rainbow-components";
 import styled from "styled-components";
 
-
 const eventStyles = makeStyles({
   logo: {
     fontFamily: 'Merienda',
@@ -38,6 +37,16 @@ const Img = styled.img`
   width: 100%;
   max-width: 100%;
 `;
+const StyledCard = styled(Card)`
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
+  margin-top: 5px;
+  border-radius: 7px;
+`;
+
+const Quote = styled.div`
+  padding: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+  `;
 
 function Events() {
   const classes = eventStyles();
@@ -136,13 +145,18 @@ function Events() {
   
           eventLink: "https://www.eventbrite.com/e/female-leaders-berlin-tickets-92711517645?aff=ebdssbdestsearch"
   
-    }].map(({ eventTitle, Date, img }) => (
+    }].map(({ eventTitle, Date, img , eventLink, eventDiscription}) => (
       <div style={{ margin: "1rem 0rem" }}>
-        <Row>
+        <Row>          
+          <StyledCard>
           <Img src={img} />
-          <Card>
-            {eventTitle} <p>{Date}</p> 
-          </Card>
+          <Quote>
+           <h4> {eventTitle} </h4>
+            <h5>{Date}</h5> 
+    <p>{eventDiscription}</p>
+    <a  href={eventLink} target="_blank" rel="noopener noreferrer">Event Info</a>
+    </Quote>
+              </StyledCard>
         </Row>
       </div>
     ))}}
