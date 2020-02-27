@@ -16,7 +16,31 @@ const bookStyles = makeStyles({
     },
 });
 
+const searchBooks = [
+    "Siri",
+    "Alexa",
+    "Google",
+    "Facebook",
+    "Twitter",
+    "Linkedin",
+    "Sinkedin"
+];
+
+
 function Books() {
+
+    const [searchTerm, setSearchTerm] = React.useState("");
+    const [searchResults, setSearchResults] = React.useState([]);
+    const handleChange = searchBooks => {
+        setSearchTerm(searchBooks.target.value);
+    };
+    React.useEffect(() => {
+        const results = searchBooks.filter(searchBooks =>
+            searchBooks.toLowerCase().includes(searchTerm)
+        );
+        setSearchResults(results);
+    }, [searchTerm]);
+
 
     const [data, setData] = useState([]);
 
@@ -36,6 +60,20 @@ function Books() {
             <nav>
                 <h1 className={classes.logo} id='homePageLogo'>Books</h1>
             </nav>
+
+            <div className="App">
+                <input
+                    type="text"
+                    placeholder="Search"
+                    value={searchTerm}
+                    onChange={handleChange}
+                />
+                <ul>
+                    {searchResults.map(item => (
+                        <li>{item}</li>
+                    ))}
+                </ul>
+            </div>
 
             <ul className="list-group">
                 {data.length && data.map(result => (
