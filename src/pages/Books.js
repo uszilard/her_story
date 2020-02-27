@@ -15,6 +15,21 @@ const Input = styled.input`
   font-size: 16px;
   margin-top: 5px;
 `;
+const StyledCard = styled(Card)`
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
+  border-radius: 7px;
+`;
+export const Quote = styled.div`
+  padding: 0.5rem;
+  font-family: "Open Sans", sans-serif;
+`;
+
+const Img = styled.img`
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  max-width: 100%;
+`;
 
 const BASEURL = "https://www.googleapis.com/books/v1/volumes?q="
 
@@ -73,7 +88,8 @@ function Books() {
             <ul className="list-group">
                 {searchResults.length && searchResults.map(({ volumeInfo, infoLink }) => {
 
-                    return (
+                    return ([
+
                         <li className="list-group-item" key={volumeInfo.title}>
                             <h4>{volumeInfo.title}</h4>
                             <p>By:{volumeInfo.auther}</p>
@@ -81,6 +97,16 @@ function Books() {
                             <p>{volumeInfo.description}</p>
                             <a href={infoLink}>more info</a>
                         </li>
+                    ].map(({ quote, name, img }) => (
+                        <div style={{ margin: "1rem 0rem" }}>
+                            <StyledCard>
+                                <Img src={img} />
+                                <Quote>
+                                    {quote} - {name}
+                                </Quote>
+                            </StyledCard>
+                        </div>
+                    ))
                     )
                 })}
             </ul>

@@ -21,9 +21,7 @@ const eventStyles = makeStyles({
   }
 });
 
-const meetupEvents = [
-
-];
+const meetupEvents = [];
 
 const Input = styled.input`
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
