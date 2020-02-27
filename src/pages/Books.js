@@ -2,7 +2,17 @@ import React, { useEffect } from "react";
 import { Container } from "../components/Grid";
 import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios'
+import styled from "styled-components";
 
+
+const Input = styled.input`
+  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
+  border-radius: 7px;
+  padding: 0.5rem;
+  border: 1px solid pink;
+  width: -webkit-fill-available;
+  font-size: 16px;
+`;
 
 const BASEURL = "https://www.googleapis.com/books/v1/volumes?q="
 
@@ -15,7 +25,6 @@ const bookStyles = makeStyles({
         border: 'ridge'
     },
 });
-
 
 function Books() {
 
@@ -42,7 +51,7 @@ function Books() {
             </nav>
 
             <div className="App">
-                <input
+                <Input
                     type="text"
                     placeholder="Search"
                     value={searchTerm}
@@ -52,6 +61,7 @@ function Books() {
 
             <ul className="list-group">
                 {searchResults.length && searchResults.map(({ volumeInfo, infoLink }) => {
+
                     return (
                         <li className="list-group-item" key={volumeInfo.title}>
                             <h4>{volumeInfo.title}</h4>
