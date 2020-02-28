@@ -32,6 +32,7 @@ const StyledCard = styled(Card)`
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
   margin-top: 5px;
   border-radius: 7px;
+  padding: 0.5rem;
 `;
 
 const Quote = styled.div`
@@ -45,17 +46,17 @@ const Img = styled.img`
   max-width: 100%;
 `;
 const Button = styled.button`
-background-color: #962877; 
-box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
-  margin-top: 5px;
-width: 100%;
-  border: none;
-  color: white;
-  padding: 5px;
-  text-align: center;
-   font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 4px;
+    background-color: #962877; 
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 4px;
   `;
 
 function NewsLetter() {
