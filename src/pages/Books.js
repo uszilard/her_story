@@ -97,17 +97,16 @@ function Books() {
             <Ul className="list-group">
                 {searchResults.length && searchResults.map(({ volumeInfo }) => {
                     return (
-                        <li className="list-group-item" key={volumeInfo.title}>
-                            <StyledCard>
-                                <Img src={volumeInfo.imageLinks.smallThumbnail} />
-                                <Quote>
-                                    <h4>{volumeInfo.title}</h4>
-                                    <p>By: {volumeInfo.authors}</p>
-                                    <p>{volumeInfo.description.substring(0, 100) + "..."}</p>
-                                    <a href={volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">more info</a>
-                                </Quote>
-                            </StyledCard>
-                        </li>
+                        <StyledCard>
+                            <Img src={volumeInfo.imageLinks.thumbnail} />
+                            <Quote>
+                                <h4>{volumeInfo.title}</h4>
+                                <p>By: {volumeInfo.authors}</p>
+                                <p>{volumeInfo.description.substring(0, 100) + "..."}</p>
+                                <a href={volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">more info</a>
+                            </Quote>
+                        </StyledCard>
+
                     )
                 })}
             </Ul>
