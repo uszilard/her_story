@@ -55,7 +55,7 @@ width: 100%;
   text-align: center;
    font-size: 16px;
   margin: 4px 2px;
-  border-radius: 4px;
+  border-radius: 2px;
   `;
 
 function NewsLetter() {
