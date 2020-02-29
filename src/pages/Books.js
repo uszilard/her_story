@@ -3,6 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios'
 import styled from "styled-components";
 import { Card } from "react-rainbow-components";
+import _ from "lodash"
 
 
 import { Input, StyledCard, Quote, Img } from "../components/styled"
@@ -33,13 +34,21 @@ const bookStyles = makeStyles({
     }
 });
 
+
 function Books() {
 
-    const [searchTerm, setSearchTerm] = React.useState("women enpwerment");
+    const [searchTerm, setSearchTerm] = React.useState("women empowerment");
     const [searchResults, setSearchResults] = React.useState([]);
-    const handleChange = searchBooks => {
-        setSearchTerm(searchBooks.target.value);
+    const handleSubmit = searchBooks => {
+        searchBooks.preventDefault();
+        // setSearchTerm(searchBooks.target.value);
     };
+
+    const handleChange = e => {
+        setSearchTerm(e.target.value)
+
+    }
+
 
     useEffect(() => {
         const fetchData = async () => {
@@ -61,16 +70,17 @@ function Books() {
             </Card>
 
             <div className="App">
-                <Input
-                    type="text"
-                    placeholder="Search"
-                    value={searchTerm}
-                    onChange={handleChange}
-                />
+                <form onSubmit={handleSubmit}>
+                    <Input
+                        type="text"
+                        placeholder="Search"
+                        value={searchTerm}
+                        onChange={handleChange} />
+                </form>
             </div>
 
             <Ul className="list-group">
-                {searchResults.length && searchResults.map(({ volumeInfo }) => {
+                {searchResults.length ? searchResults.map(({ volumeInfo }) => {
                     return (
                         <StyledCard style={{ display: "flex" }}>
                             <Img src={volumeInfo.imageLinks.thumbnail} />
@@ -83,8 +93,10 @@ function Books() {
                         </StyledCard>
 
                     )
-                })}
+                }) : "Loading....."}
             </Ul>
+
+            <br></br>
 
         </Container>
     );
