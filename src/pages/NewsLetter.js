@@ -2,7 +2,6 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from "react-rainbow-components";
 import styled from "styled-components";
-
 import { Input, StyledCard, Quote, Img } from "../components/styled"
 import { Row, Container } from "../components/Grid";
 
@@ -28,7 +27,7 @@ const NewsLetterStyles = makeStyles({
 
 
 const Button = styled.button`
-    background-color: #962877; 
+    background-color: #802D45; 
     box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
     margin-top: 5px;
     width: 100%;
@@ -52,7 +51,7 @@ function NewsLetter() {
           </nav>
         </Card>
         <StyledCard>
-          <h3>Join Our Fast Growing Community Of Women Empowermant</h3>
+          <h3>Join Our Fast Growing Community Of Women</h3>
           <Img src="/newsletter.png" />
           <Quote>
             <form>
