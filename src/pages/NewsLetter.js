@@ -2,13 +2,10 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from "react-rainbow-components";
 import styled from "styled-components";
-
 import Mailchimp from 'react-mailchimp-form'
-
 
 import { Input, StyledCard, Quote, Img } from "../components/styled"
 import { Row, Container } from "../components/Grid";
-
 
 const NewsLetterStyles = makeStyles({
   logo: {
@@ -25,7 +22,6 @@ const NewsLetterStyles = makeStyles({
     maxWidth: "100%",
   }
 });
-
 
 const Button = styled.button`
     background-color: #802D45; 
