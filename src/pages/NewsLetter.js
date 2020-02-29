@@ -2,10 +2,10 @@ import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from "react-rainbow-components";
 import styled from "styled-components";
+import Mailchimp from 'react-mailchimp-form'
 
 import { Input, StyledCard, Quote, Img } from "../components/styled"
 import { Row, Container } from "../components/Grid";
-
 
 
 const NewsLetterStyles = makeStyles({
@@ -23,8 +23,6 @@ const NewsLetterStyles = makeStyles({
     maxWidth: "100%",
   }
 });
-
-
 
 
 const Button = styled.button`
@@ -54,6 +52,42 @@ function NewsLetter() {
         <StyledCard>
           <h3>Join Our Fast Growing Community Of Women Empowermant</h3>
           <Img src="/newsletter.png" />
+
+
+          <Mailchimp
+            action='https://snufka.us16.list-manage.com/subscribe/post?u=XXXXXXXXXXXXX&amp;id=XXXXXX'
+
+            //Adding multiple fields:
+            fields={[
+              {
+                name: 'EMAIL',
+                placeholder: 'Email',
+                type: 'email',
+                required: true
+              },
+              {
+                name: 'FNAME',
+                placeholder: 'name',
+                type: 'text',
+                required: true
+              }
+            ]}
+            // Change predetermined language
+            messages={
+              {
+                sending: "Sending...",
+                success: "Thank you for subscribing!",
+                error: "An unexpected internal error has occurred.",
+                empty: "You must write an e-mail.",
+                duplicate: "Too many subscribe attempts for this email address",
+                button: "Subscribe!"
+              }
+            }
+            // Add a personalized class
+            className='<YOUR_CLASSNAME>'
+          />
+
+
           <Quote>
             <form>
               <Input type="text" placeholder="Name"></Input>
@@ -62,6 +96,11 @@ function NewsLetter() {
             </form>
           </Quote>
 
+
+
+
+
+
         </StyledCard>
       </Row>
     </Container>
@@ -69,3 +108,4 @@ function NewsLetter() {
 }
 
 export default NewsLetter;
+
