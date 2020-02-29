@@ -3,7 +3,9 @@ import React from "react";
 import { Col, Row, Container } from "../components/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Card } from "react-rainbow-components";
-import styled from "styled-components";
+
+import { Input, StyledCard, Quote, Img } from "../components/styled"
+
 
 const eventStyles = makeStyles({
   logo: {
@@ -23,30 +25,6 @@ const eventStyles = makeStyles({
 
 const meetupEvents = [];
 
-const Input = styled.input`
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
-  padding: 0.5rem;
-  border: 1px solid pink;
-  width: -webkit-fill-available;
-  font-size: 16px;
-  margin-top: 5px;
-`;
-const Img = styled.img`
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  max-width: 100%;
-`;
-const StyledCard = styled(Card)`
-  box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
-  margin-top: 5px;
-  border-radius: 7px;
-`;
-
-const Quote = styled.div`
-  padding: 0.5rem;
-  font-family: "Open Sans", sans-serif;
-  `;
 
 function Events() {
   const classes = eventStyles();
