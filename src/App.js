@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
 import { BrowserRouter as Router, Route, Switch, Link } from "react-router-dom";
-import Mailchimp from 'react-mailchimp-form'
-
 import Home from "./pages/Home";
 import Nav from "./components/Nav";
 import Events from "./pages/Events";
@@ -39,17 +37,7 @@ class App extends Component {
           <Route exact path="/newsletter" component={NewsLetter} />
         </Switch>
 
-        <Mailchimp
-          action='https://snufka.us16.list-manage.com/subscribe/post?u=c29e77bbdf2fbd3bec36ae6d5&amp;id=7c6e36e074"'
-          fields={[
-            {
-              name: 'EMAIL',
-              placeholder: 'Email',
-              type: 'email',
-              required: true
-            }
-          ]}
-        />
+
       </Router>
     )
   }
