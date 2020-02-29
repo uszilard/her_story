@@ -35,9 +35,9 @@ const bookStyles = makeStyles({
 
 function Books() {
 
-    const [searchTerm, setSearchTerm] = React.useState("women enpwerment");
+    const [searchTerm, setSearchTerm] = React.useState("women empowerment");
     const [searchResults, setSearchResults] = React.useState([]);
-    const handleChange = searchBooks => {
+    const handleSubmit = searchBooks => {
         setSearchTerm(searchBooks.target.value);
     };
 
@@ -65,12 +65,12 @@ function Books() {
                     type="text"
                     placeholder="Search"
                     value={searchTerm}
-                    onChange={handleChange}
+                    onSubmit={handleSubmit}
                 />
             </div>
 
             <Ul className="list-group">
-                {searchResults.length && searchResults.map(({ volumeInfo }) => {
+                {searchResults.length ? searchResults.map(({ volumeInfo }) => {
                     return (
                         <StyledCard style={{ display: "flex" }}>
                             <Img src={volumeInfo.imageLinks.thumbnail} />
@@ -83,8 +83,10 @@ function Books() {
                         </StyledCard>
 
                     )
-                })}
+                }) : "Loading....."}
             </Ul>
+
+            <br></br>
 
         </Container>
     );
