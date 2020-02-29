@@ -27,6 +27,5 @@ export const Img = styled.img`
   justify-content: center;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 10px;
   max-width: -webkit-fill-available;
 `;
