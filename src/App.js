@@ -40,7 +40,7 @@ class App extends Component {
         </Switch>
 
         <Mailchimp
-          action='https://snufka.us16.list-manage.com/subscribe/post?u=XXXXXXXXXXXXX&amp;id=XXXXXX'
+          action='https://snufka.us16.list-manage.com/subscribe/post?u=c29e77bbdf2fbd3bec36ae6d5&amp;id=7c6e36e074"'
           fields={[
             {
               name: 'EMAIL',
