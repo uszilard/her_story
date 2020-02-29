@@ -4,7 +4,7 @@ import { Card } from "react-rainbow-components";
 const borderRadius = 7
 
 
-export const Input = styled.Quote1`
+export const Input = styled.input`
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
   padding: 0.5rem;
   border: 1px solid pink;
