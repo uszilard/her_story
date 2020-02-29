@@ -1,13 +1,10 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from "react-rainbow-components";
-
 import Mailchimp from 'react-mailchimp-form'
 
 import { StyledCard, Quote, Img } from "../components/styled"
 import { Row, Container } from "../components/Grid";
-
-
 
 const NewsLetterStyles = makeStyles({
   logo: {
