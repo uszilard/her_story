@@ -5,7 +5,7 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import HomeIcon from "@material-ui/icons/Home";
 import PeopleIcon from "@material-ui/icons/People";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
-import FolderIcon from "@material-ui/icons/Folder";
+import EmailIcon from "@material-ui/icons/Folder";
 
 import { Link } from "react-router-dom";
 
@@ -45,7 +45,7 @@ export default function SimpleBottomNavigation() {
         <BottomNavigationAction showLabel='true' label="Books" icon={<MenuBookIcon />} />
       </Link>
       <Link to='/newsletter'>
-        <BottomNavigationAction showLabel='true' label="NewsLetter" value="folder" icon={<FolderIcon />} />
+        <BottomNavigationAction showLabel='true' label="NewsLetter" icon={<EmailIcon />} />
       </Link>
     </BottomNavigation>
   );
