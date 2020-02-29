@@ -26,18 +26,19 @@ const NewsLetterStyles = makeStyles({
 
 
 
+
 const Button = styled.button`
-background-color: #962877; 
-box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
-  margin-top: 5px;
-width: 100%;
-  border: none;
-  color: white;
-  padding: 5px;
-  text-align: center;
-   font-size: 16px;
-  margin: 4px 2px;
-  border-radius: 2px;
+    background-color: #962877; 
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
+    margin-top: 5px;
+    width: 100%;
+    border: none;
+    color: white;
+    padding: 5px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    border-radius: 4px;
   `;
 
 function NewsLetter() {
