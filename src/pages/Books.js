@@ -51,6 +51,7 @@ function Books() {
     }, [searchTerm]);
 
     const classes = bookStyles();
+
     return (
         <Container fluid>
             <Card>
@@ -71,7 +72,7 @@ function Books() {
             <Ul className="list-group">
                 {searchResults.length && searchResults.map(({ volumeInfo }) => {
                     return (
-                        <StyledCard>
+                        <StyledCard style={{ display: "flex" }}>
                             <Img src={volumeInfo.imageLinks.thumbnail} />
                             <Quote>
                                 <h4>{volumeInfo.title}</h4>
