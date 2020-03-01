@@ -8,7 +8,7 @@ export const Input = styled.input`
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
   padding: 0.5rem;
   border: 1px solid pink;
-    border-radius: ${borderRadius}px;
+  border-radius: ${borderRadius}px;
   width: -webkit-fill-available;
   font-size: 16px;
   margin-top: 5px;
