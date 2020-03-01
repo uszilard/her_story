@@ -1,9 +1,11 @@
 import React from "react";
 import { makeStyles } from '@material-ui/core/styles';
 import { Card } from "react-rainbow-components";
+
 import Mailchimp from 'react-mailchimp-form'
 
-import { StyledCard, Quote, Img } from "../components/styled"
+import { StyledCard, Img } from "../components/styled
+
 import { Row, Container } from "../components/Grid";
 
 const NewsLetterStyles = makeStyles({
@@ -44,6 +46,7 @@ const NewsLetterStyles = makeStyles({
   }
 });
 
+
 function NewsLetter() {
   const classes = NewsLetterStyles();
   return (
@@ -58,37 +61,38 @@ function NewsLetter() {
           <h3>Join Our Fast Growing Community Of Women</h3>
           <Img src="/newsletter.png" />
 
-          <Quote>
+          <Mailchimp
+            action='https://netlify.us19.list-manage.com/subscribe/post?u=c29e77bbdf2fbd3bec36ae6d5&amp;id=7c6e36e074'
 
-            <Mailchimp className={classes.input}
-              action='https://netlify.us19.list-manage.com/subscribe/post?u=c29e77bbdf2fbd3bec36ae6d5&amp;id=7c6e36e074'
-
-              fields={[
-                {
-                  name: 'EMAIL',
-                  placeholder: 'Email',
-                  type: 'email',
-                  required: true
-                },
-                {
-                  name: 'FNAME',
-                  placeholder: 'name',
-                  type: 'text',
-                  required: true
-                }
-              ]}
-              messages={
-                {
-                  sending: "Sending...",
-                  success: "Thank you for subscribing!",
-                  error: "An unexpected internal error has occurred.",
-                  empty: "You must write an e-mail.",
-                  duplicate: "Too many subscribe attempts for this email address",
-                  button: "Subscribe!"
-                }
+            //Adding multiple fields:
+            fields={[
+              {
+                name: 'EMAIL',
+                placeholder: 'Email',
+                type: 'email',
+                required: true
+              },
+              {
+                name: 'FNAME',
+                placeholder: 'Name',
+                type: 'text',
+                required: true
               }
-            />
-          </Quote>
+            ]}
+            // Change predetermined language
+            messages={
+              {
+                sending: "Sending...",
+                success: "Thank you for subscribing!",
+                error: "An unexpected internal error has occurred.",
+                empty: "You must write an e-mail.",
+                duplicate: "Too many subscribe attempts for this email address",
+                button: "Subscribe"
+              }
+            }
+            // Add a personalized class
+            className='mailchimpform'
+          />
 
         </StyledCard>
       </Row>
