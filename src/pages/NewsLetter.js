@@ -4,10 +4,9 @@ import { Card } from "react-rainbow-components";
 
 import Mailchimp from 'react-mailchimp-form'
 
+import { StyledCard, Img } from "../components/styled
 
-import { StyledCard, Img } from "../components/styled"
 import { Row, Container } from "../components/Grid";
-
 
 const NewsLetterStyles = makeStyles({
   logo: {
@@ -22,10 +21,30 @@ const NewsLetterStyles = makeStyles({
     justifyContent: 'center',
     width: "100%",
     maxWidth: "100%",
+  },
+  input: {
+    boxShadow: 'rgba(0, 0, 0, 0.12) 0px 2px 10px',
+    padding: '0.5rem',
+    border: '1px solid pink',
+    borderRadius: '7px',
+    width: 'webkit-fill-available',
+    fontSize: '16px',
+    marginTop: '5px',
+  },
+  button: {
+    backgroundColor: '#802D45',
+    boxShadow: 'rgba(0, 0, 0, 0.12) 0px 2px 10px',
+    marginTop: '5px',
+    width: '100%',
+    border: 'none',
+    color: 'white',
+    padding: '5px',
+    textAlign: 'center',
+    fontSize: '16px',
+    margin: '4px 2px',
+    borderRadius: '4px',
   }
 });
-
-
 
 
 function NewsLetter() {
@@ -73,6 +92,7 @@ function NewsLetter() {
             }
           // Add a personalized class
           />
+
         </StyledCard>
       </Row>
     </Container>
@@ -80,4 +100,3 @@ function NewsLetter() {
 }
 
 export default NewsLetter;
-
