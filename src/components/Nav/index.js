@@ -19,8 +19,8 @@ const useStyles = makeStyles({
     position: "fixed",
     bottom: 0,
     zIndex: 1,
-    boxShadow: "20px 0px 20px rgba(182, 182, 182, 0.75)",
-    backgroundColor: '#FFBABE'
+    boxShadow: "20px 4px 20px #333",
+    backgroundColor: 'white'
   }
 });
 const StyledLink = styled(Link)`
