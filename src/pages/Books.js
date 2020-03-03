@@ -36,12 +36,16 @@ const bookStyles = makeStyles({
 
 
 function Books() {
-
-    const [searchTerm, setSearchTerm] = React.useState("women empowerment");
+    const fetchData = async (str) => {
+        const result = await axios.get(BASEURL + str + "&maxResults=10&printType=books");
+        console.log(result)
+        setSearchResults(result.data.items || []);
+    };
+    const [searchTerm, setSearchTerm] = React.useState("");
     const [searchResults, setSearchResults] = React.useState([]);
     const handleSubmit = searchBooks => {
         searchBooks.preventDefault();
-        // setSearchTerm(searchBooks.target.value);
+        fetchData(searchTerm);
     };
 
     const handleChange = e => {
@@ -51,13 +55,8 @@ function Books() {
 
 
     useEffect(() => {
-        const fetchData = async () => {
-            const result = await axios.get(BASEURL + searchTerm + "&maxResults=10&printType=books");
-            console.log(result)
-            setSearchResults(result.data.items || []);
-        };
-        fetchData();
-    }, [searchTerm]);
+        fetchData('women empowerment');
+    }, []);
 
     const classes = bookStyles();
 
@@ -81,13 +80,14 @@ function Books() {
 
             <Ul className="list-group">
                 {searchResults.length ? searchResults.map(({ volumeInfo }) => {
+                    console.log(volumeInfo.imageLinks)
                     return (
                         <StyledCard style={{ display: "flex" }}>
-                            <Img src={volumeInfo.imageLinks.thumbnail} />
+                            {volumeInfo.imageLinks ? <div class={'bgContain'} style={{ backgroundImage: `URL('${volumeInfo.imageLinks.thumbnail}')` }} /> : null}
                             <Quote>
                                 <h4>{volumeInfo.title}</h4>
                                 <p>By: {volumeInfo.authors}</p>
-                                <p>{volumeInfo.description.substring(0, 100) + "..."}</p>
+                                <p>{volumeInfo.description ? volumeInfo.description.substring(0, 100) + "..." : ''}</p>
                                 <a href={volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">more info</a>
                             </Quote>
                         </StyledCard>
