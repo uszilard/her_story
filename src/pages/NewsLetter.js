@@ -71,8 +71,7 @@ function NewsLetter() {
                 button: "Subscribe"
               }
             }
-            // Add a personalized class
-            className='mailchimpform'
+          // Add a personalized class
           />
         </StyledCard>
       </Row>
