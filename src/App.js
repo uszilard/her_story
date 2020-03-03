@@ -12,22 +12,7 @@ class App extends Component {
     return (
       <Router>
         <Nav>
-          <div>
-            <ul>
-              <li>
-                <Link to='/'>Home</Link>
-              </li>
-              <li>
-                <Link to='/events'>Events</Link>
-              </li>
-              <li>
-                <Link to='/books'>Books</Link>
-              </li>
-              <li>
-                <Link to='/newsletter'>News Letter</Link>
-              </li>
-            </ul>
-          </div>
+
         </Nav>
 
         <Switch>
