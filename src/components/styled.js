@@ -17,7 +17,7 @@ export const StyledCard = styled(Card)`
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
   border-radius:  ${borderRadius}px;
   margin-top: 5px;
-  
+   
 `;
 export const Quote = styled.div`
   padding: 0.5rem;
