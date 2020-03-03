@@ -7,6 +7,8 @@ import PeopleIcon from "@material-ui/icons/People";
 import MenuBookIcon from "@material-ui/icons/MenuBook";
 import EmailIcon from "@material-ui/icons/Folder";
 
+import styled from "styled-components"
+
 import { Link } from "react-router-dom";
 
 
@@ -21,7 +23,9 @@ const useStyles = makeStyles({
     backgroundColor: '#FFBABE'
   }
 });
-
+const StyledLink = styled(Link)`
+text-decoration: none;
+`
 export default function SimpleBottomNavigation() {
   const classes = useStyles();
   const [value, setValue] = React.useState(0);
@@ -35,18 +39,18 @@ export default function SimpleBottomNavigation() {
       showLabels
       className={classes.root}
     >
-      <Link to='/'>
+      <StyledLink to='/'>
         <BottomNavigationAction showLabel='true' label="Home" icon={<HomeIcon />} />
-      </Link>
-      <Link to='/events'>
+      </StyledLink>
+      <StyledLink to='/events'>
         <BottomNavigationAction showLabel='true' label="Events" icon={<PeopleIcon />} />
-      </Link>
-      <Link to='/books'>
+      </StyledLink>
+      <StyledLink to='/books'>
         <BottomNavigationAction showLabel='true' label="Books" icon={<MenuBookIcon />} />
-      </Link>
-      <Link to='/newsletter'>
+      </StyledLink>
+      <StyledLink to='/newsletter'>
         <BottomNavigationAction showLabel='true' label="NewsLetter" icon={<EmailIcon />} />
-      </Link>
+      </StyledLink>
     </BottomNavigation>
   );
 }
