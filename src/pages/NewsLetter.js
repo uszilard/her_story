@@ -4,7 +4,7 @@ import { Card } from "react-rainbow-components";
 
 import Mailchimp from 'react-mailchimp-form'
 
-import { StyledCard, Img } from "../components/styled
+import { StyledCard, Img } from "../components/styled"
 
 import { Row, Container } from "../components/Grid";
 
