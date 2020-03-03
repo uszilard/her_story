@@ -11,14 +11,14 @@ import styled from "styled-components"
 
 import { Link } from "react-router-dom";
 
-import { FaFemale } from 'react-icons/fa';
-import { MdPeople } from 'react-icons/md';
-import { GiWhiteBook } from 'react-icons/gi';
-import { MdEmail } from 'react-icons/md';
+import { IoIosFemale } from 'react-icons/io';
+import { MdEventAvailable } from 'react-icons/md';
+import { GiBlackBook } from 'react-icons/gi';
+import { AiOutlineMail } from 'react-icons/ai';
 
 
 const pink = "#CC0E70"
-const navFontSize = "20px"
+const navFontSize = "23px"
 
 const useStyles = makeStyles({
   root: {
@@ -28,7 +28,9 @@ const useStyles = makeStyles({
     bottom: 0,
     zIndex: 1,
     boxShadow: "20px 4px 20px #333",
-    backgroundColor: 'white'
+    backgroundColor: 'white',
+    paddingTop: "10px"
+
   }
 });
 const StyledLink = styled(Link)`
@@ -48,16 +50,16 @@ export default function SimpleBottomNavigation() {
       className={classes.root}
     >
       <StyledLink to='/'>
-        <BottomNavigationAction showLabel='true' label="Home" icon={<FaFemale color={pink} size={navFontSize} />} />
+        <BottomNavigationAction showLabel='true' label="Home" icon={<IoIosFemale color={pink} size={navFontSize} />} />
       </StyledLink>
       <StyledLink to='/events'>
-        <BottomNavigationAction showLabel='true' label="Events" icon={<MdPeople color={pink} size={navFontSize} />} />
+        <BottomNavigationAction showLabel='true' label="Events" icon={<MdEventAvailable color={pink} size={navFontSize} />} />
       </StyledLink>
       <StyledLink to='/books'>
-        <BottomNavigationAction showLabel='true' label="Books" icon={<GiWhiteBook color={pink} size={navFontSize} />} />
+        <BottomNavigationAction showLabel='true' label="Books" icon={<GiBlackBook color={pink} size={navFontSize} />} />
       </StyledLink>
       <StyledLink to='/newsletter'>
-        <BottomNavigationAction showLabel='true' label="NewsLetter" icon={<MdEmail color={pink} size={navFontSize} />} />
+        <BottomNavigationAction showLabel='true' label="NewsLetter" icon={<AiOutlineMail color={pink} size={navFontSize} />} />
       </StyledLink>
     </BottomNavigation>
   );
