@@ -8,7 +8,7 @@ h1, h2, h3, h4, h5, h6 {
   color: #805360;
 }
 
-.mailchimpform {
+input {
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
   padding: 0.5rem;
   border: 1px solid pink;
@@ -18,7 +18,7 @@ h1, h2, h3, h4, h5, h6 {
   margin-top: 5px;
 }
 
-.subbutton {
+form>button {
   background-color: #802D45;
   box-shadow: rgba(0, 0, 0, 0.12) 0px 2px 10px;
   margin-top: 5px;

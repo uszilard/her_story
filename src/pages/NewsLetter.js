@@ -4,7 +4,7 @@ import { Card } from "react-rainbow-components";
 
 import Mailchimp from 'react-mailchimp-form'
 
-import { StyledCard, Img } from "../components/styled
+import { StyledCard, Img } from "../components/styled"
 
 import { Row, Container } from "../components/Grid";
 
@@ -57,7 +57,7 @@ function NewsLetter() {
             <img id="homePageLogo" className={classes.img} alt="Logo Her Story" src="/hslogo3.PNG"></img>
           </nav>
         </Card>
-        <StyledCard>
+        <StyledCard style={{ padding: "0.5rem" }}>
           <h3>Join Our Fast Growing Community Of Women</h3>
           <Img src="/newsletter.png" />
 
@@ -90,8 +90,7 @@ function NewsLetter() {
                 button: "Subscribe"
               }
             }
-            // Add a personalized class
-            className='mailchimpform'
+          // Add a personalized class
           />
 
         </StyledCard>
