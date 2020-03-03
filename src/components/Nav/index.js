@@ -11,6 +11,9 @@ import styled from "styled-components"
 
 import { Link } from "react-router-dom";
 
+import { FaFemale } from 'react-icons/fa';
+
+const pink = "#CC0E70"
 
 const useStyles = makeStyles({
   root: {
@@ -40,7 +43,7 @@ export default function SimpleBottomNavigation() {
       className={classes.root}
     >
       <StyledLink to='/'>
-        <BottomNavigationAction showLabel='true' label="Home" icon={<HomeIcon />} />
+        <BottomNavigationAction showLabel='true' label="Home" icon={<FaFemale color={pink} size="25px" />} />
       </StyledLink>
       <StyledLink to='/events'>
         <BottomNavigationAction showLabel='true' label="Events" icon={<PeopleIcon />} />
