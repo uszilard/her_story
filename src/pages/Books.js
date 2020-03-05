@@ -3,10 +3,10 @@ import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios'
 import styled from "styled-components";
 import { Card } from "react-rainbow-components";
-import _ from "lodash"
 
 
-import { Input, StyledCard, Quote, Img } from "../components/styled"
+
+import { Input, StyledCard, Quote } from "../components/styled"
 import { Container } from "../components/Grid";
 
 const Ul = styled.ul`

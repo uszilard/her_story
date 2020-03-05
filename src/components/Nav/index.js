@@ -2,10 +2,6 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-//import HomeIcon from "@material-ui/icons/Home";
-//import PeopleIcon from "@material-ui/icons/People";
-import MenuBookIcon from "@material-ui/icons/MenuBook";
-import EmailIcon from "@material-ui/icons/Folder";
 
 import styled from "styled-components"
 

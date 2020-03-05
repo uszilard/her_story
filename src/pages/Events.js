@@ -1,11 +1,9 @@
 import React from "react";
-//import ReactDOM from "react-dom"
-import { Col, Row, Container } from "../components/Grid";
+import {  Row, Container } from "../components/Grid";
 import { makeStyles } from "@material-ui/core/styles";
 import { Card } from "react-rainbow-components";
 
-import { Input, StyledCard, Quote, Img } from "../components/styled"
-
+import { StyledCard, Quote, Img } from "../components/styled"
 
 const eventStyles = makeStyles({
   logo: {
@@ -23,23 +21,8 @@ const eventStyles = makeStyles({
   }
 });
 
-const meetupEvents = [];
-
-
 function Events() {
   const classes = eventStyles();
-
-  const [searchTerm, setSearchTerm] = React.useState("");
-  const [searchResults, setSearchResults] = React.useState([]);
-  const handleChange = meetupEvents => {
-    setSearchTerm(meetupEvents.target.value);
-  };
-  React.useEffect(() => {
-    const results = meetupEvents.filter(meetupEvents =>
-      meetupEvents.toLowerCase().includes(searchTerm)
-    );
-    setSearchResults(results);
-  }, [searchTerm]);
 
   return (
     <Container fluid>
@@ -49,21 +32,7 @@ function Events() {
             <img id="homePageLogo" className={classes.img} alt="Logo Her Story" src="/hslogo3.PNG"></img>
           </nav>
         </Card>
-        <Col size="md-6 sm-12">
-          <div className="App">
-            <Input
-              type="text"
-              placeholder="Search"
-              value={searchTerm}
-              onChange={handleChange}
-            />
-            <ul>
-              {searchResults.map(item => (
-                <li>{item}</li>
-              ))}
-            </ul>
-          </div>
-        </Col>
+       
         </Row>
       
    {[{
