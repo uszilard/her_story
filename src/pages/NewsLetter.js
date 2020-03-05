@@ -36,7 +36,7 @@ function NewsLetter() {
           </nav>
         </Card>
         <StyledCard style={{ padding: "0.5rem" }}>
-          <h3>Join Our Fast Growing Community Of Women</h3>
+          <h3 style={{ textAlign: 'center' }}>Join Our Fast Growing Community Of Women</h3>
           <Img src="/newsletter.png" />
 
           <Mailchimp
