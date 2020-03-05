@@ -31,3 +31,4 @@ export const Img = styled.img`
   margin-right: auto;
   max-width: -webkit-fill-available;
 `;
+

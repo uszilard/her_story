@@ -5,7 +5,7 @@ import styled from "styled-components";
 import { Card } from "react-rainbow-components";
 import BookRender from "./BookRender"
 
-import { Input, StyledCard, Quote } from "../components/styled"
+import { Input } from "../components/styled"
 import { Container } from "../components/Grid";
 
 const Ul = styled.ul`
@@ -63,7 +63,7 @@ export class VoteUpDown extends React.Component {
     }
 }
 
-function Books({ score, increment, decrement }) {
+function Books() {
 
 
 
@@ -115,9 +115,6 @@ function Books({ score, increment, decrement }) {
                         <BookRender volumeInfo={volumeInfo} />
                     )
                 }) : "Loading....."}
-
-
-
             </Ul>
 
             <br></br>
