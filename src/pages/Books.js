@@ -3,8 +3,7 @@ import { makeStyles } from '@material-ui/core/styles';
 import axios from 'axios'
 import styled from "styled-components";
 import { Card } from "react-rainbow-components";
-
-
+import BookRender from "./BookRender"
 
 import { Input, StyledCard, Quote } from "../components/styled"
 import { Container } from "../components/Grid";
@@ -35,7 +34,39 @@ const bookStyles = makeStyles({
 });
 
 
-function Books() {
+export class VoteUpDown extends React.Component {
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            score: 0,
+        };
+
+        this.increment = this.increment.bind(this);
+        this.decrement = this.decrement.bind(this);
+    }
+
+    increment() {
+        this.setState({
+            score: this.state.score + 1,
+        });
+    }
+
+    decrement() {
+        this.setState({
+            score: this.state.score - 1,
+        });
+    }
+
+    render() {
+        return <Books score={this.state.score} />
+    }
+}
+
+function Books({ score, increment, decrement }) {
+
+
+
     const fetchData = async (str) => {
         const result = await axios.get(BASEURL + str + "&maxResults=10&printType=books");
         console.log(result)
@@ -80,20 +111,13 @@ function Books() {
 
             <Ul className="list-group">
                 {searchResults.length ? searchResults.map(({ volumeInfo }) => {
-                    console.log(volumeInfo.imageLinks)
                     return (
-                        <StyledCard style={{ display: "flex" }}>
-                            {volumeInfo.imageLinks ? <div class={'bgContain'} style={{ backgroundImage: `URL('${volumeInfo.imageLinks.thumbnail}')` }} /> : null}
-                            <Quote>
-                                <h4>{volumeInfo.title}</h4>
-                                <p>By: {volumeInfo.authors}</p>
-                                <p>{volumeInfo.description ? volumeInfo.description.substring(0, 100) + "..." : ''}</p>
-                                <a href={volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">more info</a>
-                            </Quote>
-                        </StyledCard>
-
+                        <BookRender volumeInfo={volumeInfo} />
                     )
                 }) : "Loading....."}
+
+
+
             </Ul>
 
             <br></br>
@@ -102,5 +126,5 @@ function Books() {
     );
 }
 
-export default Books;
+export default VoteUpDown;
 
