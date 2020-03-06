@@ -13,12 +13,19 @@ import { Row, Container, Col } from "../components/Grid";
 const VoteCard = styled(Card)`
 box-shadow: rgba(0,0,0,0.12) 0px 2px 10px;
 padding: 0.5rem;
-border: 1px solid pink;
+border: 1px solid #ccc;
 border-radius: 7px;
 width: -webkit-fill-available;
-
-margin-top: 5px;
+margin-bottom: 10px;
 `;
+
+const voteStyleUp = {
+paddingRight: '10px'
+};
+
+const voteStyleDown = {
+paddingLeft: '10px'
+};
 
 
 export default ({ volumeInfo }) => {
@@ -42,20 +49,17 @@ export default ({ volumeInfo }) => {
                 </div>
                 
             </Quote>
-            
-        </StyledCard>
 
-            </Row>
+        </StyledCard>
+        </Row>
+
+
             <VoteCard>
                 <Row xs='12'>
                     <div>
-                    <ThumbUpIcon className="countUp" showLabel='true' onClick={() => getCount(count + 1)} icon={<ThumbUpIcon />} />
-                    
-                    <ThumbDownIcon className="countDown" showLabel='true' onClick={() => getCount(count - 1)} icon={<ThumbDownIcon />} />
-
-                    <br></br>
-
+                    <ThumbUpIcon className="countUp" showLabel='true' style={voteStyleUp} onClick={() => getCount(count + 1)} icon={<ThumbUpIcon />} />
                     <counter>{count}</counter>
+                    <ThumbDownIcon className="countDown" showLabel='true' style={voteStyleDown} onClick={() => getCount(count - 1)} icon={<ThumbDownIcon />} />
                     </div>
                 </Row>
             </VoteCard>
