@@ -11,7 +11,7 @@ class App extends Component {
   render() {
     return (
       <Router>
-        
+
         <Nav></Nav>
 
         <Switch>
