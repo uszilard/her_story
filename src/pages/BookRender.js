@@ -27,6 +27,13 @@ const voteStyleDown = {
 paddingLeft: '10px'
 };
 
+const counterStyle = {
+    border: '2px solid rgb(204, 204, 204)',
+    padding: '5px',
+    fontSize: 'x-large',
+    fontStyle: 'italic'
+}
+
 
 export default ({ volumeInfo }) => {
 
@@ -58,7 +65,7 @@ export default ({ volumeInfo }) => {
                 <Row xs='12'>
                     <div>
                     <ThumbUpIcon className="countUp" showLabel='true' style={voteStyleUp} onClick={() => getCount(count + 1)} icon={<ThumbUpIcon />} />
-                    <counter>{count}</counter>
+                    <counter style={counterStyle}>{count}</counter>
                     <ThumbDownIcon className="countDown" showLabel='true' style={voteStyleDown} onClick={() => getCount(count - 1)} icon={<ThumbDownIcon />} />
                     </div>
                 </Row>
