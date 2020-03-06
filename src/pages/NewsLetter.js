@@ -1,12 +1,9 @@
-import React from "react";
+import React from 'react';
 import { makeStyles } from '@material-ui/core/styles';
-import { Card } from "react-rainbow-components";
-
-import Mailchimp from 'react-mailchimp-form'
-
-import { StyledCard, Img } from "../components/styled"
-
-import { Row, Container } from "../components/Grid";
+import { Card } from 'react-rainbow-components';
+import Mailchimp from 'react-mailchimp-form';
+import { StyledCard, Img } from '../components/styled';
+import { Row, Container } from '../components/Grid';
 
 const NewsLetterStyles = makeStyles({
   logo: {
@@ -23,7 +20,6 @@ const NewsLetterStyles = makeStyles({
     maxWidth: "100%",
   }
 });
-
 
 function NewsLetter() {
   const classes = NewsLetterStyles();
@@ -42,7 +38,6 @@ function NewsLetter() {
           <Mailchimp
             action='https://netlify.us19.list-manage.com/subscribe/post?u=c29e77bbdf2fbd3bec36ae6d5&amp;id=7c6e36e074'
 
-            //Adding multiple fields:
             fields={[
               {
                 name: 'EMAIL',
@@ -57,7 +52,6 @@ function NewsLetter() {
                 required: true
               }
             ]}
-            // Change predetermined language
             messages={
               {
                 sending: "Sending...",
@@ -68,9 +62,7 @@ function NewsLetter() {
                 button: "Subscribe"
               }
             }
-          // Add a personalized class
           />
-
         </StyledCard>
       </Row>
     </Container>

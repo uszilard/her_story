@@ -1,5 +1,5 @@
-import styled from "styled-components"
-import { Card } from "react-rainbow-components";
+import styled from 'styled-components';
+import { Card } from 'react-rainbow-components';
 
 const borderRadius = 7
 
@@ -21,7 +21,7 @@ export const StyledCard = styled(Card)`
 `;
 export const Quote = styled.div`
   padding: 0.5rem;
-  font-family: "Open Sans", sans-serif;
+  font-family: 'Open Sans', sans-serif;
 `;
 
 export const Img = styled.img`

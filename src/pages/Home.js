@@ -1,14 +1,10 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Card } from "react-rainbow-components";
-
-import { StyledCard, Quote, Img } from "../components/styled"
-
-
+import React from 'react';
+import { makeStyles } from '@material-ui/core/styles';
+import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import { Card } from 'react-rainbow-components';
+import { StyledCard, Quote, Img } from '../components/styled';
 
 const homeStyles = makeStyles({
-
   root: {
     minWidth: 275
   },
@@ -30,9 +26,6 @@ const homeStyles = makeStyles({
     maxWidth: "100%",
   }
 });
-
-
-
 
 function Home() {
   const classes = homeStyles();
@@ -70,8 +63,6 @@ function Home() {
         img: "/janis.jpeg",
         quote: '"Don’t compromise yourself. You are all you’ve got."'
       },
-
-
       {
         name: "Sojourner Truth, American abolitionist",
         img: "/sojojpg.jpg",
@@ -84,7 +75,6 @@ function Home() {
         quote:
           `"If it's a good idea, go ahead and do it.It's much easier to apologize than it is to get permission."`
       }
-
       ].map(({ quote, name, img }) => (
         <div style={{ margin: "1rem 0rem" }}>
           <StyledCard>
