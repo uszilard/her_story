@@ -27,26 +27,39 @@ export default ({ volumeInfo }) => {
         count, getCount
     ] = useState(0)
 
-    return <StyledCard style={{ display: "flex" }}>
-
-
+    return <Container>
+        <Row>
+        <StyledCard style={{ display: "flex" }}>
         {volumeInfo.imageLinks ? <div class={'bgContain'} style={{ backgroundImage: `URL('${volumeInfo.imageLinks.thumbnail}')` }} /> : null}
-        <Container>
+
             <Quote>
+                
                 <div>
                     <h4>{volumeInfo.title}</h4>
                     <p>By: {volumeInfo.authors}</p>
                     <p>{volumeInfo.description ? volumeInfo.description.substring(0, 100) + "..." : ''}</p>
-                    <a href={volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">more info</a>
+                    <a href={volumeInfo.infoLink} target="_blank" rel="noopener noreferrer">more info</a>  
                 </div>
+                
             </Quote>
+            
+        </StyledCard>
+
+            </Row>
             <VoteCard>
-                <Row>
+                <Row xs='12'>
+                    <div>
                     <ThumbUpIcon className="countUp" showLabel='true' onClick={() => getCount(count + 1)} icon={<ThumbUpIcon />} />
-                    <counter>{count}</counter>
+                    
                     <ThumbDownIcon className="countDown" showLabel='true' onClick={() => getCount(count - 1)} icon={<ThumbDownIcon />} />
+
+                    <br></br>
+
+                    <counter>{count}</counter>
+                    </div>
                 </Row>
             </VoteCard>
-        </Container>
-    </StyledCard>
+        
+    
+    </Container>
 }
