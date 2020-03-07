@@ -35,7 +35,7 @@ function Events() {
       {[{
         eventTitle: "Women's Empowerment Brunch - Berlin: Self-Worth Edition",
         host: "Female Leaders Berlin",
-        Date: "Mon, March 2",
+        Date: "Mon, March 16",
         startHour: "10:00 AM ",
         endHour: "11:30 AM",
         eventDiscription: "How to start a business in Berlin? What is Finanzamt and what should I know before I go there? What to know before I start? Where to find funding? Is my business plan doable?",
@@ -46,7 +46,7 @@ function Events() {
       {
         eventTitle: "Women's Empowerment Brunch - Berlin: Self-Worth Edition",
         host: "Female Leaders Berlin",
-        Date: "Mon, March 2",
+        Date: "Mon, March 16",
         startHour: "10:00 AM ",
         endHour: "11:30 AM",
         eventDiscription: "How to start a business in Berlin? What is Finanzamt and what should I know before I go there? What to know before I start? Where to find funding? Is my business plan doable?",
@@ -56,7 +56,7 @@ function Events() {
       }, {
         eventTitle: "Women's Empowerment Brunch - Berlin: Self-Worth Edition",
         host: "Female Leaders Berlin",
-        Date: "Mon, March 2",
+        Date: "Mon, March 16",
         startHour: "10:00 AM ",
         endHour: "11:30 AM",
         eventDiscription: "How to start a business in Berlin? What is Finanzamt and what should I know before I go there? What to know before I start? Where to find funding? Is my business plan doable?",
@@ -66,7 +66,7 @@ function Events() {
       }, {
         eventTitle: "Women's Empowerment Brunch - Berlin: Self-Worth Edition",
         host: "Female Leaders Berlin",
-        Date: "Mon, March 2",
+        Date: "Mon, March 16",
         startHour: "10:00 AM ",
         endHour: "11:30 AM",
         eventDiscription: "How to start a business in Berlin? What is Finanzamt and what should I know before I go there? What to know before I start? Where to find funding? Is my business plan doable?",
@@ -77,7 +77,7 @@ function Events() {
       {
         eventTitle: "Women's Empowerment Brunch - Berlin: Self-Worth Edition",
         host: "Female Leaders Berlin",
-        Date: "Mon, March 2",
+        Date: "Mon, March 16",
         startHour: "10:00 AM ",
         endHour: "11:30 AM",
         eventDiscription: "How to start a business in Berlin? What is Finanzamt and what should I know before I go there? What to know before I start? Where to find funding? Is my business plan doable?",
