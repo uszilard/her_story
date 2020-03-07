@@ -103,8 +103,6 @@ function Books() {
                 }) : "Loading....."}
             </Ul>
 
-            <br></br>
-
         </Container>
     );
 }
