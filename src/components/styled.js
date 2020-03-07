@@ -20,7 +20,7 @@ export const StyledCard = styled(Card)`
    
 `;
 export const Quote = styled.div`
-  padding: 0.5rem;
+  padding: 18px;
   font-family: 'Open Sans', sans-serif;
 `;
 
@@ -31,4 +31,3 @@ export const Img = styled.img`
   margin-right: auto;
   max-width: -webkit-fill-available;
 `;
-

@@ -101,8 +101,8 @@ function Events() {
             </StyledCard>
           </Row>
         </div>
-      ))}}
-  
+      ))}
+
     </Container>
   );
 }

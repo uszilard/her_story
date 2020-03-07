@@ -24,7 +24,7 @@ const voteStyleDown = {
 };
 
 const counterStyle = {
-    border: '2px solid rgb(204, 204, 204)',
+
     padding: '5px',
     fontSize: 'x-large',
     fontStyle: 'italic'
