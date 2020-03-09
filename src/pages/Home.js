@@ -39,7 +39,7 @@ function Home() {
     {
       name: "Michelle Obama, Former First Lady of the United States",
       img: "/obama.png",
-      quote: `"Whether you come from a council estate or a country estate, your success will be determined by your own confidence and fortitude"`
+      quote: `"Instead of letting your hardships and failures discourage or exhaust you, let them inspire you. Let them make you even hungrier to succeed"`
 
     },
 
