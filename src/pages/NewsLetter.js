@@ -33,7 +33,7 @@ function NewsLetter() {
         </Card>
         <StyledCard style={{ padding: "0.5rem" }}>
           <h3 style={{ textAlign: 'center' }}>Join Our Fast Growing Community Of Women</h3>
-          <Img src="/newsletter.png" />
+          <Img src="/newsletter.jpg" />
 
           <Mailchimp
             action='https://netlify.us19.list-manage.com/subscribe/post?u=c29e77bbdf2fbd3bec36ae6d5&amp;id=7c6e36e074'

@@ -38,14 +38,14 @@ function Home() {
   const quotes = [
     {
       name: "Michelle Obama, Former First Lady of the United States",
-      img: "/obama.png",
+      img: "/obama.jpg",
       quote: `"Instead of letting your hardships and failures discourage or exhaust you, let them inspire you. Let them make you even hungrier to succeed"`
 
     },
 
     {
       name: "Nancy Regan, Former First Lady of the United States",
-      img: "/nancy.PNG",
+      img: "/nancy.jpg",
       quote: `“A woman is like a tea bag. She only knows her strength when put in hot water.”`
     },
     {
@@ -67,7 +67,7 @@ function Home() {
     },
     {
       name: "Janis Joplin, American musician",
-      img: "/janis.png",
+      img: "/janis.jpg",
       quote: '"Don’t compromise yourself. You are all you’ve got."'
     },
     {
@@ -78,7 +78,7 @@ function Home() {
     },
     {
       name: "Dolly Parton, American singer-songwriter",
-      img: "/dolly.png",
+      img: "/dolly.jpg",
       quote: `"If your actions create a legacy that inspires others to dream more, learn more, do more and become more, then you are an excellent leader."`
 
     },
