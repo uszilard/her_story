@@ -42,7 +42,12 @@ function Home() {
       quote: `"Instead of letting your hardships and failures discourage or exhaust you, let them inspire you. Let them make you even hungrier to succeed"`
 
     },
+    {
+      name: "Carrie Fisher,  Actress, Writer, and Comedian",
+      img: "/Carrie.JPG",
+      quote: `"Stay afraid, but do it anyway. What’s important is the action. You don’t have to wait to be confident. Just do it and eventually the confidence will follow."`
 
+    },
     {
       name: "Nancy Regan, Former First Lady of the United States",
       img: "/nancy.jpg",
@@ -82,17 +87,12 @@ function Home() {
       quote: `"If your actions create a legacy that inspires others to dream more, learn more, do more and become more, then you are an excellent leader."`
 
     },
-    {
-      name: "Carrie Fisher,  Actress, Writer, and Comedian",
-      img: "/Carrie.JPG",
-      quote: `"Stay afraid, but do it anyway. What’s important is the action. You don’t have to wait to be confident. Just do it and eventually the confidence will follow."`
 
-    },
     {
       name: "Grace Hopper, U.S. Naval Admiral and computer scientist",
       img: "/grace.jpg",
       quote:
-        `"If it's a good idea, go ahead and do it.It's much easier to apologize than it is to get permission."`
+        `"If it's a good idea, go ahead and do it. It's much easier to apologize than it is to get permission."`
     }
   ];
   return (
