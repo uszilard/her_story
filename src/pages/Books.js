@@ -57,7 +57,7 @@ export class VoteUpDown extends React.Component {
 
 function Books() {
     const fetchData = async (str) => {
-        const result = await axios.get(BASEURL + str + "&maxResults=10&printType=books");
+        const result = await axios.get(BASEURL + str + "&maxResults=10&printType=books&orderBy=newest");
         console.log(result)
         setSearchResults(result.data.items || []);
     };
