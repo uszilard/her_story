@@ -56,7 +56,7 @@ function Home() {
     },
     {
       name: "Simone de Beauvoir, french author and philosopher",
-      img: "/simone.jpeg",
+      img: "/simone.JPG",
       quote: '"One is not born, but rather becomes, a woman."'
     },
     {
@@ -80,6 +80,12 @@ function Home() {
       name: "Dolly Parton, American singer-songwriter",
       img: "/dolly.jpg",
       quote: `"If your actions create a legacy that inspires others to dream more, learn more, do more and become more, then you are an excellent leader."`
+
+    },
+    {
+      name: "Carrie Fisher,  Actress, Writer, and Comedian",
+      img: "/Carrie.JPG",
+      quote: `"Stay afraid, but do it anyway. What’s important is the action. You don’t have to wait to be confident. Just do it and eventually the confidence will follow."`
 
     },
     {
